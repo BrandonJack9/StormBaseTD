@@ -414,8 +414,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69, y: 420, z: 1337}
+  m_LocalRotation: {x: 0.19064052, y: 0, z: 0, w: 0.98165995}
+  m_LocalPosition: {x: 0, y: 12.392284, z: -19.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -478,8 +478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitCenter: {fileID: 1375030246}
-  orbitRadius: 16
-  orbitHeight: 10.84
+  orbitRadius: 19.3
+  orbitHeight: 7.79
   orbitSpeed: 100
 --- !u!1 &394429908
 GameObject:

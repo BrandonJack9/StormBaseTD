@@ -13,11 +13,12 @@ public class RandomMeteorSpawn : MonoBehaviour
     public float spawnHeight = 10f;      // The fixed height (Y position) where the meteor spawns
 
     private float fireCooldown = 0f;
+    private bool canSpawn = true;        // Controls whether meteors can spawn
 
     void Update()
     {
         // Shoot at intervals
-        if (fireCooldown <= 0f)
+        if (canSpawn && fireCooldown <= 0f)
         {
             SpawnMeteor();
             fireCooldown = 1f / fireRate;  // Reset cooldown
@@ -59,4 +60,10 @@ public class RandomMeteorSpawn : MonoBehaviour
 
         return spawnPosition;
     }
+    public void StopSpawning()
+    {
+        canSpawn = false;
+        MeteorProjectile.stopAllMeteors = true;
+    }
+    
 }

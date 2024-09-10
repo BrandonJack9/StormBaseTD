@@ -8,6 +8,8 @@ public class MeteorProjectile : MonoBehaviour
     public float speed = 10f;                // Speed of the projectile
     public float rotateSpeed = 200f;        // Optional: Rotation speed for spinning meteor effect
     public GameObject impactEffect;         // Effect to spawn on impact
+    public static bool stopAllMeteors = false; // Static boolean to control if all meteors should stop
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,11 @@ public class MeteorProjectile : MonoBehaviour
     }
     void Update()
     {
+        if (stopAllMeteors)
+        {
+            Destroy(gameObject);
+            return;
+        }
         // Move the projectile if there's a valid target
         if (target != null)
         {

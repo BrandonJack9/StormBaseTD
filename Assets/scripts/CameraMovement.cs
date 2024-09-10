@@ -26,7 +26,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target.position);
+        //transform.LookAt(target.position);
 
         if (currentPoint == CameraPointN.transform && canSwitch)
         {
@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
             {
                 //transform.position = Vector3.MoveTowards(transform.position, CameraPointW.transform.position, distanceRight * (Time.deltaTime * speed));
                 transform.position = CameraPointW.transform.position;
-                //transform.forward = CameraPointW.transform.forward;
+                transform.forward = CameraPointW.transform.forward;
                 currentPoint = CameraPointW.transform;
                 canSwitch = false;
                 StartCoroutine(switchCoolDown());
@@ -44,7 +44,7 @@ public class CameraMovement : MonoBehaviour
             {
                 //transform.position = Vector3.MoveTowards(transform.position, CameraPointW.transform.position, distanceRight * (Time.deltaTime * speed));
                 transform.position = CameraPointE.transform.position;
-                //transform.forward = CameraPointE.transform.forward;
+                transform.forward = CameraPointE.transform.forward;
                 currentPoint = CameraPointE.transform;
                 canSwitch = false;
                 StartCoroutine(switchCoolDown());
@@ -57,7 +57,7 @@ public class CameraMovement : MonoBehaviour
             {
                 //transform.position = Vector3.MoveTowards(transform.position, CameraPointW.transform.position, distanceRight * (Time.deltaTime * speed));
                 transform.position = CameraPointE.transform.position;
-                //transform.forward = CameraPointW.transform.forward;
+                transform.forward = CameraPointE.transform.forward;
                 currentPoint = CameraPointE.transform;
                 canSwitch = false;
                 StartCoroutine(switchCoolDown());
@@ -67,7 +67,7 @@ public class CameraMovement : MonoBehaviour
             {
                 //transform.position = Vector3.MoveTowards(transform.position, CameraPointW.transform.position, distanceRight * (Time.deltaTime * speed));
                 transform.position = CameraPointW.transform.position;
-                //transform.forward = CameraPointE.transform.forward;
+                transform.forward = CameraPointW.transform.forward;
                 currentPoint = CameraPointW.transform;
                 canSwitch = false;
                 StartCoroutine(switchCoolDown());

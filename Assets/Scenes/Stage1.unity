@@ -445,8 +445,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14074968, y: -0, z: -0, w: 0.99004525}
-  m_LocalPosition: {x: -0.06, y: 11.7, z: -20.6}
+  m_LocalRotation: {x: 0.2324695, y: 0, z: 0, w: 0.97260374}
+  m_LocalPosition: {x: 0, y: 22.85, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -505,16 +505,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d6058621ca2d444aa782c6c2e70052, type: 3}
+  m_Script: {fileID: 11500000, guid: e49b241c39f650e4399ce1b8e7ec958c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraPointN: {fileID: 1677527334}
-  CameraPointW: {fileID: 1703854778}
-  CameraPointS: {fileID: 222758817}
-  CameraPointE: {fileID: 471346229}
-  currentPoint: {fileID: 1677527335}
-  target: {fileID: 1454869342}
-  speed: 1
+  orbitCenter: {fileID: 1454869342}
+  orbitRadius: 50
+  orbitHeight: 25.35
+  orbitSpeed: 25
 --- !u!1 &394429908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,8 +2118,8 @@ Transform:
   m_GameObject: {fileID: 1971743986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
-  m_LocalScale: {x: 1.687027, y: 1.687027, z: 1.687027}
+  m_LocalPosition: {x: 0, y: 3.89, z: 0}
+  m_LocalScale: {x: 3.5480046, y: 3.5480046, z: 3.5480046}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

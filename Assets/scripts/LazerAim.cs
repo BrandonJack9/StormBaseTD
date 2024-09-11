@@ -27,7 +27,15 @@ public class LazerAim : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, 500, layersToHit))
         {
-            GameObject hitObject = hit.collider.gameObject;
+            HandeLazerFire(hit);
+        }
+       
+        
+        
+    }
+
+    private void HandeLazerFire(RaycastHit hit){
+        GameObject hitObject = hit.collider.gameObject;
             if (hitObject != null){
                  if (lastUsedTime + lazerDelay < Time.time){
                     GameObject currentLazer = Instantiate(lazerPrefab);
@@ -42,10 +50,5 @@ public class LazerAim : MonoBehaviour
                 gunBarrel.transform.LookAt(hit.point);
                 Debug.DrawRay(barrelPoint.transform.position, barrelPoint.forward * 500, Color.red);
             }
-            
-        }
-       
-        
-        
     }
 }

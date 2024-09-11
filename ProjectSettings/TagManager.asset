@@ -6,6 +6,7 @@ TagManager:
   tags:
   - base
   - meteor
+  - Circle
   layers:
   - Default
   - TransparentFX

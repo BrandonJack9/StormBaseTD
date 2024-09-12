@@ -6,7 +6,7 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
-    [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar, crossHair, timerText;
+    [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar, crossHair, timer;
     public RandomMeteorSpawn meteorSpawner;
 
     public void Awake()
@@ -41,7 +41,7 @@ public class CanvasManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         deathScreen.SetActive(true);
         crossHair.SetActive(false);
-        timerText.SetActive(false);
+        timer.SetActive(false);
     }
 
     public void RestartLevel()

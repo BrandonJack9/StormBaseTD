@@ -628,6 +628,50 @@ MonoBehaviour:
     m_Y: 180
     m_Width: 52
     m_Height: 30
+  - m_X: 63
+    m_Y: 180
+    m_Width: 52
+    m_Height: 75
+  - m_X: 63
+    m_Y: 255
+    m_Width: 52
+    m_Height: 75
+  - m_X: 63
+    m_Y: 330
+    m_Width: 30
+    m_Height: 63
+  - m_X: 0
+    m_Y: 480
+    m_Width: 52
+    m_Height: 75
+  - m_X: 0
+    m_Y: 555
+    m_Width: 52
+    m_Height: 75
+  - m_X: 0
+    m_Y: 630
+    m_Width: 52
+    m_Height: 75
+  - m_X: 0
+    m_Y: 705
+    m_Width: 52
+    m_Height: 75
+  - m_X: 0
+    m_Y: 780
+    m_Width: 52
+    m_Height: 75
+  - m_X: 0
+    m_Y: 855
+    m_Width: 52
+    m_Height: 75
+  - m_X: 0
+    m_Y: 930
+    m_Width: 52
+    m_Height: 75
+  - m_X: 52
+    m_Y: 480
+    m_Width: 41
+    m_Height: 75
   m_FreeGlyphRects:
   - m_X: 0
     m_Y: 618

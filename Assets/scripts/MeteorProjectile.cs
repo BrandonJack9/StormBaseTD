@@ -14,7 +14,7 @@ public class MeteorProjectile : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the meteor has hit the target (or any object you want)
-        if (other.CompareTag("base")) // Ensure the target has the "Target" tag
+        if (other.CompareTag("base") || other.CompareTag("lazer"))// Ensure the target has the "Target" tag
         {
             Destroy(gameObject);
         }

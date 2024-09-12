@@ -63,7 +63,12 @@ public class RandomMeteorSpawn : MonoBehaviour
     public void StopSpawning()
     {
         canSpawn = false;
-        MeteorProjectile.stopAllMeteors = true;
+        //MeteorProjectile.stopAllMeteors = true;
     }
     
+    public void StartSpawning()
+    {
+        canSpawn = true;
+        //MeteorProjectile.stopAllMeteors = false;
+    }
 }

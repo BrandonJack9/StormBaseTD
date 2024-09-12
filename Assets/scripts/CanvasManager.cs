@@ -6,8 +6,9 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
-    [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar;
-    
+    [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar, crossHair, timerText;
+    public RandomMeteorSpawn meteorSpawner;
+
     public void Awake()
     {
         if (CanvasManager.instance == null) instance = this;
@@ -39,7 +40,12 @@ public class CanvasManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         deathScreen.SetActive(true);
+        crossHair.SetActive(false);
+        timerText.SetActive(false);
     }
 
-
+    public void RestartLevel()
+    {
+        meteorSpawner.StartSpawning();
+    }
 }

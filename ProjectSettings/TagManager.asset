@@ -7,6 +7,7 @@ TagManager:
   - base
   - meteor
   - Circle
+  - lazer
   layers:
   - Default
   - TransparentFX

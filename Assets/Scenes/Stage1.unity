@@ -955,8 +955,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.023490498, y: 0.9604638, z: 0.26391098, w: 0.08549007}
-  m_LocalPosition: {x: -6.6657166, y: -0.22080302, z: 20.161606}
+  m_LocalRotation: {x: -0.096373804, y: 0.8982106, z: 0.24680547, w: 0.35073766}
+  m_LocalPosition: {x: -16.451561, y: -0.22080314, z: 13.426399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1542,9 +1542,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495421474}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.036324818, y: -0.000000073122294, z: -0.000000030129335,
-    w: 0.9993401}
-  m_LocalPosition: {x: -0.0000014080231, y: -0.00000012909948, z: 0.00000021718233}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.0000007, y: 2.0000002, z: -0.00000047683716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2259,9 +2258,9 @@ MonoBehaviour:
   powerupPanel: {fileID: 0}
   deathScreen: {fileID: 796032143}
   bossHealthBar: {fileID: 0}
-  crossHair: {fileID: 0}
-  timerText: {fileID: 0}
-  meteorSpawner: {fileID: 0}
+  crossHair: {fileID: 566517253}
+  timerText: {fileID: 58927631}
+  meteorSpawner: {fileID: 2135086189}
 --- !u!114 &865914184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4225,9 +4224,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055227866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018141331, y: -0.000000066091445, z: -0.000000034972594,
-    w: 0.99983543}
-  m_LocalPosition: {x: -0.0000014080231, y: -0.00000012909948, z: 0.00000021718233}
+  m_LocalRotation: {x: 0.018141406, y: -0.00000006955142, z: -0.000000052810783, w: 0.99983543}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4305,9 +4303,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073758590}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000013070566, y: -0.000000072574, z: -0.000000035917875,
+  m_LocalRotation: {x: -0.00000007818314, y: -0.00000006915438, z: -0.000000039702627,
     w: 1}
-  m_LocalPosition: {x: -0.0000014080231, y: -0.00000012909948, z: 0.00000021718233}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

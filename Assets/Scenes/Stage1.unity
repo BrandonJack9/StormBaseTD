@@ -954,6 +954,7 @@ GameObject:
   - component: {fileID: 330585549}
   - component: {fileID: 330585550}
   - component: {fileID: 330585551}
+  - component: {fileID: 330585552}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1028,8 +1029,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22439383, y: 0.51272565, z: 0.14088404, w: 0.8166465}
-  m_LocalPosition: {x: -17.629997, y: -0.22080326, z: -11.836606}
+  m_LocalRotation: {x: -0.247901, y: -0.34035242, z: -0.093520276, w: 0.90219694}
+  m_LocalPosition: {x: 16.13742, y: -0.22080314, z: -13.802379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1255,6 +1256,23 @@ MonoBehaviour:
   m_Offset: {x: 3, y: 2, z: 0}
   m_ApplyAfter: 1
   m_PreserveComposition: 0
+--- !u!114 &330585552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 6ce3d21b75b394841a3734865fc9e3c6, type: 2}
 --- !u!1 &394429908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,8 +1635,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495421474}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.036324967, y: -0.00000014365568, z: -0.000000059099797, w: 0.99934006}
-  m_LocalPosition: {x: 3.0000002, y: 1.9999998, z: 0.00000047683716}
+  m_LocalRotation: {x: 0.036325034, y: 0.000000023232525, z: 0.000000018655971, w: 0.9993401}
+  m_LocalPosition: {x: -0.0000006298994, y: 0.00000046835052, z: -0.00000055459907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2548,7 +2566,7 @@ MonoBehaviour:
   deathScreen: {fileID: 796032143}
   bossHealthBar: {fileID: 0}
   crossHair: {fileID: 566517253}
-  timerText: {fileID: 58927631}
+  timer: {fileID: 0}
   meteorSpawner: {fileID: 2135086189}
 --- !u!114 &865914184
 MonoBehaviour:
@@ -6022,8 +6040,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055227866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018141473, y: -0.00000007325093, z: -0.00000004194667, w: 0.99983543}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.01814157, y: 0.00000006498255, z: 0.00000003812576, w: 0.9998355}
+  m_LocalPosition: {x: -0.0000006298994, y: 0.00000046835052, z: -0.00000055459907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6101,9 +6119,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073758590}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000003287576, y: -0.00000014844231, z: -0.00000008005145,
+  m_LocalRotation: {x: 0.000000077110904, y: 0.000000024620336, z: 0.00000001563925,
     w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0000006298994, y: 0.00000046835052, z: -0.00000055459907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

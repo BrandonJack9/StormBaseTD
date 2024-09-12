@@ -8,6 +8,7 @@ public class CanvasManager : MonoBehaviour
     public static CanvasManager instance;
     [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar, crossHair, timerText;
     public RandomMeteorSpawn meteorSpawner;
+    public GameObject pausButt;
 
     public void Awake()
     {
@@ -36,12 +37,20 @@ public class CanvasManager : MonoBehaviour
             bossHealthBar.SetActive(false);
         }
     }
+    // public void GameOver()
+    // {
+    //     Cursor.lockState = CursorLockMode.None;
+    //     deathScreen.SetActive(true);
+    //     crossHair.SetActive(false);
+    //     timerText.SetActive(false);
+    // }
     public void GameOver()
     {
         Cursor.lockState = CursorLockMode.None;
         deathScreen.SetActive(true);
         crossHair.SetActive(false);
         timerText.SetActive(false);
+        pausButt.SetActive(false);
     }
 
     public void RestartLevel()

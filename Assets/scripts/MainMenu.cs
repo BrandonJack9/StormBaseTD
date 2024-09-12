@@ -11,6 +11,12 @@ public class MainMenu : MonoBehaviour
     public GameObject timerObject;    // Reference to the timer object you want to hide when paused
     public GameObject crosshair;
     public GameObject Pauseicon;
+    public GameObject stageFailText;
+
+    // public GameObject pausButt;
+
+    // public static MainMenu instance;
+    // [SerializeField] GameObject deathScreen, crossHair, timerText;
     private bool isPaused = false;    // Tracks whether the game is paused or not
 
     void Start()
@@ -87,6 +93,10 @@ public class MainMenu : MonoBehaviour
         {
             Pauseicon.SetActive(false);    // Hide the pause icon when paused
         }
+        // if (stageFailText != null)
+        // {
+        //     stageFailText.SetActive(false);    // Hide the pause icon when paused
+        // }
         isPaused = true;                   // Set the game as paused
 
         UnlockCursor(); // Unlock and show the cursor for UI interaction
@@ -110,6 +120,10 @@ public class MainMenu : MonoBehaviour
         {
             Pauseicon.SetActive(true);     // Show the pause icon when resuming
         }
+        // if (stageFailText != null)
+        // {
+        //     stageFailText.SetActive(true);    // Hide the pause icon when paused
+        // }
         isPaused = false;                  // Set the game as unpaused
 
         LockCursor(); // Lock the cursor again when the game resumes (only if not in Main Menu)
@@ -156,6 +170,15 @@ public class MainMenu : MonoBehaviour
         // Replace "MainMenu" with the exact name of your Main Menu scene
         return SceneManager.GetActiveScene().name == "MainMenu";
     }
+
+    // public void GameOver()
+    // {
+    //     Cursor.lockState = CursorLockMode.None;
+    //     deathScreen.SetActive(true);
+    //     crossHair.SetActive(false);
+    //     timerText.SetActive(false);
+    //     pausButt.SetActive(false);
+    // }
 }
 
 

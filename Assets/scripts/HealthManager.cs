@@ -32,6 +32,7 @@ public class HealthManager : MonoBehaviour
         if(healthAmount <= 0)
         {
             CanvasManager.instance.GameOver();
+            //MainMenu.instance.GameOver();
         }
     }
 

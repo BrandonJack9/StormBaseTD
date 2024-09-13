@@ -11,13 +11,13 @@ public class Sensitivity : MonoBehaviour
     public int sensThresholdX;         // how much the x-axis sensitivity will change with slider
     public int sensThresholdY;         // how much the y-axis sensitivity will change with slider  
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // set the default camera speed to level corresponding to sensNumber = 1
         Cinemachine.CinemachineFreeLook mCameraCM = Camera.main.GetComponent<Cinemachine.CinemachineFreeLook>();
-        mCameraCM.m_XAxis.m_MaxSpeed = sensThresholdX;
-        mCameraCM.m_YAxis.m_MaxSpeed = sensThresholdY;
+        sensSlider.value = 2;
+        Debug.Log("Initial of x-axis is: " + mCameraCM.m_XAxis.m_MaxSpeed);
+        Debug.Log("Initial of y-axis is: " + mCameraCM.m_YAxis.m_MaxSpeed);
     }
 
     // Update is called once per frame
@@ -35,5 +35,7 @@ public class Sensitivity : MonoBehaviour
         Cinemachine.CinemachineFreeLook mCameraCM = Camera.main.GetComponent<Cinemachine.CinemachineFreeLook>();
         mCameraCM.m_XAxis.m_MaxSpeed = sensSlider.value * sensThresholdX;
         mCameraCM.m_YAxis.m_MaxSpeed = sensSlider.value * sensThresholdY;
+        Debug.Log("Current x-axis speed is: " + mCameraCM.m_XAxis.m_MaxSpeed);
+        Debug.Log("Current y-axis speed is: " + mCameraCM.m_YAxis.m_MaxSpeed);
     }
 }

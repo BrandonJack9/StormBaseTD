@@ -13,6 +13,8 @@ TagManager:
   - lifesteal
   - turret
   - enemy
+  - continuousbeam
+  - continuouspowerup
   layers:
   - Default
   - TransparentFX

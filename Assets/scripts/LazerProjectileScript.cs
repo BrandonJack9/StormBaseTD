@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Hierarchy;
 using UnityEngine;
 
 public class LazerProjectileScript : MonoBehaviour
@@ -8,7 +9,9 @@ public class LazerProjectileScript : MonoBehaviour
     public GameObject crystal;
     public GameObject pyramid;
     public GameObject lifeStealParticles;
+    public GameObject lifeStealParticlesContinuous;
     bool stealLife = false;
+    public float lifeStealStrength;
     // Start is called before the first frame update
    
     void Start()
@@ -35,9 +38,14 @@ public class LazerProjectileScript : MonoBehaviour
             }
         }
 
+        if (other.CompareTag("continuouspowerup")){
+            Debug.Log("got continuous beam");
+            crystal.GetComponent<TurretScript>().continuousBeamObtained = true;
+        }
+
         if (other.CompareTag("meteor") || other.CompareTag("enemy"))
         {
-            pyramid.GetComponent<HealthManager>().Heal(1 * (crystal.GetComponent<TurretScript>().lifeStealStack * .33f));
+            pyramid.GetComponent<HealthManager>().Heal(1 * ((crystal.GetComponent<TurretScript>().lifeStealStack * .33f)*lifeStealStrength));
         }
     }
 

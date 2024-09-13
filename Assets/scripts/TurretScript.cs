@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,7 +12,10 @@ public class TurretScript : MonoBehaviour
     public float lazerSpeed, fireRate, lazerLifeSpan;
     bool canFire = true;
     public bool lifeStealObtained = false;
+    public bool continuousBeamObtained = false;
     public int lifeStealStack = 0;
+    bool once = true;
+    bool twice = false;
     //public float projectileLifeTime, shootForce;
     // Start is called before the first frame update
     GameObject currentLazer;
@@ -24,14 +28,15 @@ public class TurretScript : MonoBehaviour
     void Update()
     {
         Ray ray = new Ray(cameraPoint.transform.position, cameraPoint.forward);
+        Ray ray2 = new Ray(barrelPoint.transform.position, barrelPoint.transform.forward);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 500, layersToHit))
         {
             barrelPoint.transform.LookAt(hit.point);
             gunBarrel.transform.LookAt(hit.point);
-            Debug.DrawRay(barrelPoint.transform.position, barrelPoint.forward * 500, Color.red);
+            //Debug.DrawRay(barrelPoint.transform.position, barrelPoint.forward * 500, Color.red);
 
-            if (canFire)
+            if (canFire && !continuousBeamObtained)
             {
                 currentLazer = Instantiate(lazerPrefab);
                 currentLazer.transform.position = barrelPoint.transform.position;
@@ -39,6 +44,7 @@ public class TurretScript : MonoBehaviour
                 currentLazer.GetComponent<Rigidbody>().AddForce(currentLazer.transform.up * lazerSpeed, 0);
                 StartCoroutine(fireCoolDown(fireRate));
             }
+            
         }
         else
         {
@@ -46,6 +52,28 @@ public class TurretScript : MonoBehaviour
             gunBarrel.transform.LookAt(aimLookAt);
         }
         
+        //continuous beam functionality
+        if (Physics.Raycast(ray2, out hit, 500, layersToHit))
+        {
+            float beamDistance = (hit.distance);
+            Debug.DrawRay(barrelPoint.transform.position, barrelPoint.forward * beamDistance, Color.red);
+            if (canFire && continuousBeamObtained)
+            {
+                if (once)
+                {
+                    continuousBeamInstance();
+                    once = false;
+                }
+                currentLazer.transform.position = barrelPoint.transform.position;
+                currentLazer.transform.up = barrelPoint.transform.forward;
+                currentLazer.transform.localScale = new Vector3(currentLazer.transform.localScale.x, beamDistance * .5f, currentLazer.transform.localScale.z); //this line tells the beam how long it should be
+                currentLazer.transform.Translate(0, currentLazer.transform.localScale.y,0); //this line moves the beam forward so that its situated properly
+                if(lifeStealObtained)
+                {
+                    currentLazer.GetComponent<LazerProjectileScript>().lifeStealParticlesContinuous.SetActive(true);
+                }
+            }
+        }
 
     }
     
@@ -57,4 +85,9 @@ public class TurretScript : MonoBehaviour
         canFire = true;
     }
 
+    void continuousBeamInstance()
+    {
+        currentLazer = Instantiate(lazerPrefab);
+        currentLazer.GetComponent<LazerProjectileScript>().projectileLifeTime = (100f);
+    }
 }

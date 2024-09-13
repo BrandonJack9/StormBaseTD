@@ -10,6 +10,9 @@ TagManager:
   - lazer
   - enemyProjectile
   - ground
+  - lifesteal
+  - turret
+  - enemy
   layers:
   - Default
   - TransparentFX

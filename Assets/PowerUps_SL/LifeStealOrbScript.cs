@@ -15,10 +15,10 @@ public class LifeStealOrbScript : MonoBehaviour
         // Check if the meteor has hit the target (or any object you want)
         if (other.CompareTag("lazer"))// Ensure the target has the "Target" tag
         {
-            if(other.GetComponent<LifeStealProjectile>().level <= 10){
+            /*if(other.GetComponent<LifeStealProjectile>().level <= 10){
                 other.GetComponent<LifeStealProjectile>().parentTurret.GetComponent<UpdatedTurretScript>().lifestealLevel+=1;
                 other.GetComponent<LifeStealProjectile>().level+=1;
-            }
+            }*/
             Destroy(gameObject);
         }
 

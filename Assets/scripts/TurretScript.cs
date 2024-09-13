@@ -10,6 +10,8 @@ public class TurretScript : MonoBehaviour
     public LayerMask layersToHit;
     public float lazerSpeed, fireRate, lazerLifeSpan;
     bool canFire = true;
+    public bool lifeStealObtained = false;
+    public int lifeStealStack = 0;
     //public float projectileLifeTime, shootForce;
     // Start is called before the first frame update
     GameObject currentLazer;

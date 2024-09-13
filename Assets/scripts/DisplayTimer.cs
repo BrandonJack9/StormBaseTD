@@ -5,7 +5,7 @@ public class DisplayTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;                // Reference to the TextMeshPro component
     public float startTime = 60f;                    // Start time in seconds (1 minute)
-    public RandomMeteorSpawn meteorSpawner;          // Reference to the RandomMeteorSpawn script
+    public EnemySpawner enemySpawner;          // Reference to the RandomMeteorSpawn script
 
     private float timeRemaining;
     private bool timerIsRunning = false;
@@ -34,7 +34,7 @@ public class DisplayTimer : MonoBehaviour
                 timerText.text = "00:00";
 
                 // Stop spawning meteors when the timer ends
-                meteorSpawner.StopSpawning();
+                enemySpawner.StopSpawning();
 
                 OnTimerEnd();
             }

@@ -13,6 +13,11 @@ public class HealthManager : MonoBehaviour
         if (other.gameObject.CompareTag("meteor")){
             TakeDamage(5);
         }
+
+        if (other.gameObject.CompareTag("enemyProjectile"))
+        {
+            TakeDamage(1);
+        }
     }
     void Start()
     {
@@ -39,6 +44,6 @@ public class HealthManager : MonoBehaviour
     {
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-        healthBar.fillAmount = healthAmount;
+        healthBar.fillAmount = healthAmount/100f;
     }
 }

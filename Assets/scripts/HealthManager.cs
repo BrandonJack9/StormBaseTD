@@ -44,6 +44,6 @@ public class HealthManager : MonoBehaviour
     {
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
-        healthBar.fillAmount = healthAmount;
+        healthBar.fillAmount = healthAmount/100f;
     }
 }

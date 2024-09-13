@@ -13,6 +13,11 @@ public class HealthManager : MonoBehaviour
         if (other.gameObject.CompareTag("meteor")){
             TakeDamage(5);
         }
+
+        if (other.gameObject.CompareTag("enemyProjectile"))
+        {
+            TakeDamage(1);
+        }
     }
     void Start()
     {

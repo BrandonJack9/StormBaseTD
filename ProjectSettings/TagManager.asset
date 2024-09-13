@@ -8,6 +8,7 @@ TagManager:
   - meteor
   - Circle
   - lazer
+  - enemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - enemies
   - Water
   - UI
-  - 
+  - base
   - 
   - 
   - 

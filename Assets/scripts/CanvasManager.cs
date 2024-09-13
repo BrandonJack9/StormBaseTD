@@ -7,7 +7,7 @@ public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
     [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar, crossHair, timer;
-    public RandomMeteorSpawn meteorSpawner;
+    public EnemySpawner enemySpawner;
 
     public void Awake()
     {
@@ -46,6 +46,6 @@ public class CanvasManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        meteorSpawner.StartSpawning();
+        enemySpawner.StartSpawning();
     }
 }

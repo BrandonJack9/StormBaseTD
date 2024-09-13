@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
     public GameObject Pauseicon;
     public GameObject stageFailText;
 
+    private CanvasManager canvasManager;
+
     // public GameObject pausButt;
 
     // public static MainMenu instance;
@@ -21,6 +23,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        canvasManager = CanvasManager.instance;
         // Only lock the cursor if not in the Main Menu scene
         if (!IsInMainMenu())
         {
@@ -42,6 +45,8 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quit Game");
+        // Time.timeScale = 1;
+        // SceneManager.LoadScene("MainMenu");
         Application.Quit();
     }
 
@@ -60,6 +65,12 @@ public class MainMenu : MonoBehaviour
     // Method to toggle the pause menu and game state
     public void TogglePause()
     {
+        if (canvasManager.deathScreen.activeSelf)
+        {
+            Debug.Log("Cannot pause the game when the death screen is active.");
+            return;
+        }
+        
         if (pauseMenuUI == null)
         {
             Debug.LogWarning("No pause menu assigned. Ignoring pause functionality.");

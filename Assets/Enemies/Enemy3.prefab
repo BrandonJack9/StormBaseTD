@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 1493101672743952344, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: meleeRange
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
@@ -51,17 +51,17 @@ PrefabInstance:
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.913513
+      value: 20.76593
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.179307
+      value: -4.3829145
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.94881
+      value: 29.203634
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
@@ -98,10 +98,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4431976228776102855, guid: 0040aa183686c5b4b8556f3af543f819,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631745881896995499, guid: 0040aa183686c5b4b8556f3af543f819,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682721225913814019, guid: 0040aa183686c5b4b8556f3af543f819,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6147458607226785661, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_Name
       value: Enemy3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594314470555373896, guid: 0040aa183686c5b4b8556f3af543f819,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7899884305427110359, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}

@@ -14,6 +14,7 @@ public class TurretScript : MonoBehaviour
     public bool lifeStealObtained = false;
     public bool continuousBeamObtained = false;
     public int lifeStealStack = 0;
+    public int beamStack = 0;
     bool once = true;
     bool twice = false;
     //public float projectileLifeTime, shootForce;
@@ -64,15 +65,20 @@ public class TurretScript : MonoBehaviour
                     continuousBeamInstance();
                     once = false;
                 }
-                currentLazer.transform.position = barrelPoint.transform.position;
-                currentLazer.transform.up = barrelPoint.transform.forward;
-                currentLazer.transform.localScale = new Vector3(currentLazer.transform.localScale.x, beamDistance * .5f, currentLazer.transform.localScale.z); //this line tells the beam how long it should be
-                currentLazer.transform.Translate(0, currentLazer.transform.localScale.y,0); //this line moves the beam forward so that its situated properly
+                    currentLazer.transform.position = barrelPoint.transform.position;
+                    currentLazer.transform.up = barrelPoint.transform.forward;
+                    currentLazer.transform.localScale = new Vector3(.1f * beamStack, beamDistance * .5f, .1f * beamStack); //this line tells the beam how long it should be
+                    currentLazer.transform.Translate(0, currentLazer.transform.localScale.y, 0); //this line moves the beam forward so that its situated properly
                 if(lifeStealObtained)
                 {
                     currentLazer.GetComponent<LazerProjectileScript>().lifeStealParticlesContinuous.SetActive(true);
                 }
             }
+        }
+        else
+        {
+            currentLazer.SetActive(false);
+            once = true;
         }
 
     }
@@ -88,6 +94,6 @@ public class TurretScript : MonoBehaviour
     void continuousBeamInstance()
     {
         currentLazer = Instantiate(lazerPrefab);
-        currentLazer.GetComponent<LazerProjectileScript>().projectileLifeTime = (100f);
+        currentLazer.GetComponent<LazerProjectileScript>().projectileLifeTime = (120f);
     }
 }

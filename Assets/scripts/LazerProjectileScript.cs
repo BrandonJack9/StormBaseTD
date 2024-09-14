@@ -41,6 +41,10 @@ public class LazerProjectileScript : MonoBehaviour
         if (other.CompareTag("continuouspowerup")){
             Debug.Log("got continuous beam");
             crystal.GetComponent<TurretScript>().continuousBeamObtained = true;
+            if (crystal.GetComponent<TurretScript>().lifeStealStack < 5)
+            {
+                crystal.GetComponent<TurretScript>().beamStack++;
+            }
         }
 
         if (other.CompareTag("meteor") || other.CompareTag("enemy"))
@@ -72,5 +76,10 @@ public class LazerProjectileScript : MonoBehaviour
     {
         yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
+    }
+
+    public void DestroyLazer()
+    {
+        Destroy(gameObject);    
     }
 }

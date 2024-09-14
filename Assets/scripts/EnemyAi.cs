@@ -9,6 +9,9 @@ public class EnemyAi : MonoBehaviour
 
     public Transform player;
 
+    public GameObject crystal;
+
+
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float maxHealth;
@@ -48,7 +51,7 @@ public class EnemyAi : MonoBehaviour
     {
         if (other.CompareTag("lazer"))
         {
-            TakeDamage(.1f);
+            TakeDamage(.1f * crystal.GetComponent<TurretScript>().beamStack);
         }
     }
     private void Awake()
@@ -56,6 +59,7 @@ public class EnemyAi : MonoBehaviour
         player = GameObject.Find("basePyramid").transform;
         agent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
+        crystal = GameObject.Find("turret");
     }
 
   

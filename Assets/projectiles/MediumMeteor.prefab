@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 3654794660529690574}
   - component: {fileID: 6505679368451706078}
   - component: {fileID: 3633445727458968967}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MediumMeteor
   m_TagString: mediummeteor
   m_Icon: {fileID: 0}

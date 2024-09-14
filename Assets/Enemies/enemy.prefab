@@ -418,7 +418,7 @@ MonoBehaviour:
     type: 3}
   sightRange: 200
   attackRange: 20
-  meleeRange: 5
+  meleeRange: 15
   playerInSightRange: 0
   playerInAttackRange: 0
   isSmall: 1

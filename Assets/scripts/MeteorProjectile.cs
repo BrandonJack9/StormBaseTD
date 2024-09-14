@@ -14,10 +14,13 @@ public class MeteorProjectile : MonoBehaviour
     float currentHealth;
     public Image healthBar;
     public GameObject healthBarObject;
+    public GameObject crystal;
+
 
     private void Start()
     {
         currentHealth = maxHealth;
+        crystal = GameObject.Find("turret");
     }
     void OnTriggerEnter(Collider other)
     {
@@ -37,7 +40,7 @@ public class MeteorProjectile : MonoBehaviour
     {
         if (other.CompareTag("lazer"))
         {
-            TakeDamage(.1f);
+            TakeDamage(.1f * crystal.GetComponent<TurretScript>().beamStack);
         }
     }
     void Update()

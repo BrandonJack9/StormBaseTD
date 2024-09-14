@@ -5,9 +5,10 @@ using UnityEngine;
 public class EnemyProjectileScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float lifeTime;
     void Start()
     {
-        
+        StartCoroutine(DeleteSelf());
     }
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class EnemyProjectileScript : MonoBehaviour
 
     IEnumerator DeleteSelf()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(lifeTime);
         Destroy(gameObject);
     }
 }

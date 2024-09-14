@@ -7,7 +7,7 @@ using TMPro;
 public class Sensitivity : MonoBehaviour
 {
     public Slider sensSlider;          // sensitivity slider in Settings panel
-    public TextMeshProUGUI sensNumber; // sensitivity ranking (default: 1 to 3)
+    public TextMeshProUGUI sensNumber; // sensitivity ranking (default: 1 to 4)
     public int sensThresholdX;         // how much the x-axis sensitivity will change with slider
     public int sensThresholdY;         // how much the y-axis sensitivity will change with slider  
 
@@ -16,7 +16,8 @@ public class Sensitivity : MonoBehaviour
     {
         // set the default camera speed to level corresponding to sensNumber = 1
         Cinemachine.CinemachineFreeLook mCameraCM = Camera.main.GetComponent<Cinemachine.CinemachineFreeLook>();
-        sensSlider.value = 2;
+        mCameraCM.m_XAxis.m_MaxSpeed = sensThresholdX;
+        mCameraCM.m_YAxis.m_MaxSpeed = sensThresholdY;
     }
 
     // Update is called once per frame
@@ -34,7 +35,5 @@ public class Sensitivity : MonoBehaviour
         Cinemachine.CinemachineFreeLook mCameraCM = Camera.main.GetComponent<Cinemachine.CinemachineFreeLook>();
         mCameraCM.m_XAxis.m_MaxSpeed = sensSlider.value * sensThresholdX;
         mCameraCM.m_YAxis.m_MaxSpeed = sensSlider.value * sensThresholdY;
-        Debug.Log("The max x-axis speed is: " + mCameraCM.m_XAxis.m_MaxSpeed);
-        Debug.Log("The max y-axis speed is: " + mCameraCM.m_YAxis.m_MaxSpeed);
     }
 }

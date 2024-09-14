@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 3654794660529690574}
   - component: {fileID: 6505679368451706078}
   - component: {fileID: 3633445727458968967}
+  - component: {fileID: 5599850907727679422}
   m_Layer: 0
   m_Name: MediumMeteor
   m_TagString: mediummeteor
@@ -305,6 +306,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5599850907727679422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703387789587717935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a73e00ad042f845ab1a99e7cd41817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootPrefabs:
+  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
+  spawnOffset: {x: 0, y: -1, z: 0}
+  dropChance: 8
 --- !u!1 &8445771877290539365
 GameObject:
   m_ObjectHideFlags: 0

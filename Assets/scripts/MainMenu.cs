@@ -11,10 +11,24 @@ public class MainMenu : MonoBehaviour
     public GameObject timerObject;    // Reference to the timer object you want to hide when paused
     public GameObject crosshair;
     public GameObject Pauseicon;
+    public GameObject stageFailText;
     private bool isPaused = false;    // Tracks whether the game is paused or not
+
+    public CanvasManager canvasManager;
 
     void Start()
     {
+
+        // if (canvasManager == null)
+        // {
+        //     canvasManager = Object.FindFirstObjectByType<CanvasManager>();
+        //     if (canvasManager == null)
+        //     {
+        //         Debug.LogError("CanvasManager not found in the scene. Please ensure it is added.");
+        //     }
+        // }
+
+
         // Only lock the cursor if not in the Main Menu scene
         if (!IsInMainMenu())
         {
@@ -52,8 +66,36 @@ public class MainMenu : MonoBehaviour
     }
 
     // Method to toggle the pause menu and game state
+    // public void TogglePause()
+    // {
+    //     if (pauseMenuUI == null)
+    //     {
+    //         Debug.LogWarning("No pause menu assigned. Ignoring pause functionality.");
+    //         return;
+    //     }
+
+    //     if (isPaused)
+    //     {
+    //         ResumeGame(); // Unpause if already paused
+    //     }
+    //     else
+    //     {
+    //         PauseGame(); // Pause the game if not already paused
+    //     }
+    // }
     public void TogglePause()
     {
+        // if (canvasManager.deathScreen.activeSelf)
+        // {
+        //     Debug.Log("Cannot pause the game when the death screen is active.");
+        //     return;
+        // }
+        if (canvasManager.deathScreen.activeSelf)
+        {
+            Debug.Log("Cannot pause the game when the death screen is active.");
+            return;
+        }
+
         if (pauseMenuUI == null)
         {
             Debug.LogWarning("No pause menu assigned. Ignoring pause functionality.");

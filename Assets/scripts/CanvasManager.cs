@@ -6,8 +6,11 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public static CanvasManager instance;
-    [SerializeField] GameObject powerupPanel, deathScreen, bossHealthBar, crossHair, timer;
+    [SerializeField] GameObject powerupPanel, bossHealthBar, crossHair, timer;
     public EnemySpawner enemySpawner;
+    public GameObject pausButt;
+    public GameObject bar;
+    public GameObject deathScreen;
 
     public void Awake()
     {
@@ -36,12 +39,23 @@ public class CanvasManager : MonoBehaviour
             bossHealthBar.SetActive(false);
         }
     }
+    // public void GameOver()
+    // {
+    //     Cursor.lockState = CursorLockMode.None;
+    //     deathScreen.SetActive(true);
+    //     crossHair.SetActive(false);
+    //     timer.SetActive(false);
+    // }
     public void GameOver()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         deathScreen.SetActive(true);
         crossHair.SetActive(false);
+        // timerText.SetActive(false);
         timer.SetActive(false);
+        pausButt.SetActive(false);
+        bar.SetActive(false);
     }
 
     public void RestartLevel()

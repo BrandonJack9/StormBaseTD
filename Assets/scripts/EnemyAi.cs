@@ -27,8 +27,13 @@ public class EnemyAi : MonoBehaviour
     public GameObject projectile;
 
     //States
-    public float sightRange, attackRange;
+    public float sightRange, attackRange, meleeRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    //Small, Medium, Big
+    public bool isSmall;
+    public bool isMedium;
+    public bool isLarge;
 
     void OnTriggerEnter(Collider other)
     {
@@ -58,9 +63,16 @@ public class EnemyAi : MonoBehaviour
     private void Update()
     {
         //Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
+        if (isSmall || isLarge)
+        {
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, meleeRange, whatIsPlayer);
+        }
+        else
+        {
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        }
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
@@ -113,9 +125,27 @@ public class EnemyAi : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            if (isSmall)
+            {
+                HealthManager hManager = GameObject.Find("basePyramid").GetComponent<HealthManager>();
+                hManager.healthAmount -= 1;
+                hManager.healthBar.fillAmount = hManager.healthAmount / 100f;
+                Debug.Log("Small melee attack!");
+
+            }
+            else if (isMedium)
+            {
+                Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+                //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            }
+            else if (isLarge)
+            {
+                HealthManager hManager = GameObject.Find("basePyramid").GetComponent<HealthManager>();
+                hManager.healthAmount -= 5;
+                hManager.healthBar.fillAmount = hManager.healthAmount / 100f;
+                Debug.Log("Large melee attack!");
+            }
             ///End of attack code
 
             alreadyAttacked = true;

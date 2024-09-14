@@ -17,5 +17,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/nopowerups.unity
     guid: c16a9cf68fd211c49a84450ce936af9b
+  - enabled: 1
+    path: Assets/Scenes/Stage1.unity
+    guid: 4ac3a50b5fc40c541848a6e88e85c4e1
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: 20a0ccf46acc542b882ed2070a0bbf5b
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: fe2a7ad56af484dc2a1b5a8d5cb84609
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

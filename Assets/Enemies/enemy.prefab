@@ -418,8 +418,12 @@ MonoBehaviour:
     type: 3}
   sightRange: 200
   attackRange: 20
+  meleeRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
+  isSmall: 1
+  isMedium: 0
+  isLarge: 0
 --- !u!1 &6594314470555373896
 GameObject:
   m_ObjectHideFlags: 0

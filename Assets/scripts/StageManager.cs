@@ -13,7 +13,7 @@ public class StageManager : MonoBehaviour
     void Update()
     {
         // move to next stage if current one is completed
-        if (GameObject.FindGameObjectsWithTag("enemy").Length == 1 && timer.text == "00:00")
+        if (GameObject.FindGameObjectsWithTag("enemy").Length == 0 && timer.text == "00:00")
         {
             Debug.Log("You win!!!!!!!!!!: " + stageNumber);
             if (stageNumber < 3)

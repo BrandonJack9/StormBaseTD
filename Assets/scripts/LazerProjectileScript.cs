@@ -49,12 +49,25 @@ public class LazerProjectileScript : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!crystal.GetComponent<TurretScript>().continuousBeamObtained == true)
+        {
+            StartCoroutine(CollisionDestroy());
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         StartCoroutine(DeleteLazer(projectileLifeTime));
     }
 
+    IEnumerator CollisionDestroy()
+    {
+        yield return new WaitForSeconds(.05f);
+        Destroy(gameObject);
+    }
     IEnumerator DeleteLazer(float lifeTime)
     {
         yield return new WaitForSeconds(lifeTime);

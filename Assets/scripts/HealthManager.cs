@@ -10,8 +10,18 @@ public class HealthManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("meteor")){
+        if (other.gameObject.CompareTag("largemeteor")) { 
             TakeDamage(5);
+        }
+
+        if (other.gameObject.CompareTag("mediummeteor"))
+        {
+            TakeDamage(3);
+        }
+
+        if (other.gameObject.CompareTag("meteor"))
+        {
+            TakeDamage(1);
         }
 
         if (other.gameObject.CompareTag("enemyProjectile"))

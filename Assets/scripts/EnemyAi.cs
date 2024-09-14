@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyAi : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class EnemyAi : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
+    public float maxHealth;
+    float currentHealth;
+    public Image healthBar;
+    public GameObject healthBarObject;
 
     //Patroling
     public Vector3 walkPoint;
@@ -29,16 +33,27 @@ public class EnemyAi : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the meteor has hit the target (or any object you want)
-        if ( other.CompareTag("lazer"))// Ensure the target has the "Target" tag
+        if ( other.CompareTag("lazer"))
         {
             TakeDamage(1);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("lazer"))
+        {
+            TakeDamage(.1f);
         }
     }
     private void Awake()
     {
         player = GameObject.Find("basePyramid").transform;
         agent = GetComponent<NavMeshAgent>();
+        currentHealth = maxHealth;
     }
+
+  
 
     private void Update()
     {
@@ -50,10 +65,12 @@ public class EnemyAi : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
 
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
            DestroyEnemy();
         }
+
+        
     }
 
     private void Patroling()
@@ -110,11 +127,11 @@ public class EnemyAi : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        health -= damage;
-
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        currentHealth -= damage;
+        healthBar.fillAmount = currentHealth / maxHealth;
+        if (currentHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
     private void DestroyEnemy()
     {

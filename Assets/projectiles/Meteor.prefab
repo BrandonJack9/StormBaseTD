@@ -233,6 +233,8 @@ MonoBehaviour:
   healthBar: {fileID: 6905145257152998813}
   healthBarObject: {fileID: 4458128609256365163}
   crystal: {fileID: 0}
+  explosionPrefab: {fileID: 22610986036880023, guid: 2a58c7fd89903bf41a6052733726406d,
+    type: 3}
 --- !u!114 &6300869410853086093
 MonoBehaviour:
   m_ObjectHideFlags: 0

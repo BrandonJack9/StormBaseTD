@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2012742839166118766}
   - component: {fileID: 1410481209280104884}
   m_Layer: 0
-  m_Name: Lightning Light
+  m_Name: Lightning flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 6687546905815280869}
   - component: {fileID: 3993737782267589095}
   - component: {fileID: 2506308394619436692}
+  - component: {fileID: 4643141258563464924}
   m_Layer: 3
   m_Name: Meteor
   m_TagString: meteor
@@ -230,6 +231,24 @@ MonoBehaviour:
   maxHealth: 1
   healthBar: {fileID: 6905145257152998813}
   healthBarObject: {fileID: 4458128609256365163}
+  crystal: {fileID: 0}
+--- !u!114 &4643141258563464924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256393791359009145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672cf9dfb87b11a4a92fcf2f677ab308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootPrefabs:
+  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
+  spawnOffset: {x: 0, y: 15, z: 0}
+  dropChance: 5
 --- !u!1 &4458128609256365163
 GameObject:
   m_ObjectHideFlags: 0

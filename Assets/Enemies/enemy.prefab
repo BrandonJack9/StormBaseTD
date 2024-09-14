@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 6551365448264751441}
   - component: {fileID: 6700888773088053439}
   - component: {fileID: 1493101672743952344}
+  - component: {fileID: 7825519410933947838}
   m_Layer: 3
   m_Name: enemy
   m_TagString: enemy
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 6700888773088053439}
   player: {fileID: 0}
+  crystal: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -424,6 +426,23 @@ MonoBehaviour:
   isSmall: 1
   isMedium: 0
   isLarge: 0
+--- !u!114 &7825519410933947838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147458607226785661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672cf9dfb87b11a4a92fcf2f677ab308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootPrefabs:
+  - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
+  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  spawnOffset: {x: 0, y: 10, z: 0}
+  dropChance: 5
 --- !u!1 &6594314470555373896
 GameObject:
   m_ObjectHideFlags: 0

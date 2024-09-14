@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &11065131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -776,6 +776,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifeStealOrb (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1108,6 +1113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: continuousPowerup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1125,6 +1135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -1434,8 +1449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.04900831, y: 0.94762206, z: 0.26038253, w: 0.17835818}
-  m_LocalPosition: {x: -10.43733, y: -0.22080314, z: 18.492813}
+  m_LocalRotation: {x: -0.20280623, y: 0.6205114, z: 0.17050089, w: 0.73808175}
+  m_LocalPosition: {x: -20.194046, y: -0.22080314, z: -6.5667686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1446,7 +1461,7 @@ Transform:
   - {fileID: 847101069}
   - {fileID: 1294348291}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 25.621, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.88, y: 80.108, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1766,6 +1781,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifeStealOrb (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1977,6 +1997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifeStealOrb (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2044,6 +2069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -2171,8 +2201,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495421474}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.036324892, y: 0.000000021399368, z: 0.000000019709413, w: 0.99934006}
-  m_LocalPosition: {x: -0.0000004442087, y: -0.00000019105195, z: 0.00000008810418}
+  m_LocalRotation: {x: 0.03632504, y: 0.0000000093913055, z: -0.000000013454771, w: 0.99934006}
+  m_LocalPosition: {x: 3.0000002, y: 2.0000005, z: -0.00000023841858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2191,6 +2221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -2662,6 +2697,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -3177,6 +3217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -3815,6 +3860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -4542,74 +4592,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152805946}
   m_CullTransparentMesh: 1
---- !u!1001 &1214379846
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 18.811737
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -12.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -54.098118
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6147458607226785661, guid: 0040aa183686c5b4b8556f3af543f819,
-        type: 3}
-      propertyPath: m_Name
-      value: enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0040aa183686c5b4b8556f3af543f819, type: 3}
 --- !u!1001 &1242595288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4622,6 +4604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -5171,7 +5158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1351126258
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5886,7 +5873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1592639312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6659,7 +6646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1805143773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6788,6 +6775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -6952,6 +6944,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeStealOrb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
@@ -7857,9 +7854,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055227866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018141428, y: 0.0000000015581265, z: 0.0000000030371055,
-    w: 0.9998355}
-  m_LocalPosition: {x: -0.0000004442087, y: -0.00000019105195, z: 0.00000008810418}
+  m_LocalRotation: {x: 0.018141534, y: -0.00000025480492, z: -0.00000017509285, w: 0.9998355}
+  m_LocalPosition: {x: 0.00000032766354, y: -0.00000085763827, z: 0.0000016760915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8012,9 +8008,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073758590}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000045886345, y: 0.0000000171198, z: 0.000000006624202,
+  m_LocalRotation: {x: 0.00000010157031, y: -0.00000014842458, z: -0.00000009375058,
     w: 1}
-  m_LocalPosition: {x: -0.0000004442087, y: -0.00000019105195, z: 0.00000008810418}
+  m_LocalPosition: {x: 0.00000032766354, y: -0.00000085763827, z: 0.0000016760915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8120,6 +8116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: continuousPowerup (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8432,6 +8433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifeStealOrb (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6247519846037257426, guid: 0775f3ccc52c56a47904ee945b3580b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8549,6 +8555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: continuousPowerup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8873,7 +8884,6 @@ SceneRoots:
   - {fileID: 259545325}
   - {fileID: 2113701095}
   - {fileID: 985782514}
-  - {fileID: 1214379846}
   - {fileID: 2139326986}
   - {fileID: 575457162}
   - {fileID: 1947592058}

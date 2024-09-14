@@ -11,7 +11,7 @@ public class MeteorProjectile : MonoBehaviour
     public GameObject impactEffect;         // Effect to spawn on impact
     public static bool stopAllMeteors = false; // Static boolean to control if all meteors should stop
     public float maxHealth;
-    float currentHealth;
+    public float currentHealth;
     public Image healthBar;
     public GameObject healthBarObject;
     public GameObject crystal;

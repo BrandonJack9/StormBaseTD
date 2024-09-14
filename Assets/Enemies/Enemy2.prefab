@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 7825519410933947838, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: dropChance
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7899884305427110359, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}

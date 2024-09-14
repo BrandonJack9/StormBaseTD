@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 1276674797722523352}
   - component: {fileID: 738059846459797133}
   - component: {fileID: 3993502123521311270}
-  - component: {fileID: 1865123588907930411}
+  - component: {fileID: 7685936954764784779}
   m_Layer: 3
   m_Name: LargeMeteor
   m_TagString: largemeteor
@@ -483,10 +483,11 @@ MonoBehaviour:
   rotateSpeed: 200
   impactEffect: {fileID: 0}
   maxHealth: 7
+  currentHealth: 0
   healthBar: {fileID: 4102771321438332582}
   healthBarObject: {fileID: 2371566170769223432}
   crystal: {fileID: 0}
---- !u!114 &1865123588907930411
+--- !u!114 &7685936954764784779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,11 +496,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6108339705370481910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 672cf9dfb87b11a4a92fcf2f677ab308, type: 3}
+  m_Script: {fileID: 11500000, guid: d3a22cecfa1e3d44ab11519e0c68b23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lootPrefabs:
-  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
   - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
+  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  script: {fileID: 3993502123521311270}
   spawnOffset: {x: 0, y: 15, z: 0}
-  dropChance: 20
+  dropChance: 60
+  spawned: 0

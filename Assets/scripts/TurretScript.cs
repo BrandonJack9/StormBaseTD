@@ -75,7 +75,7 @@ public class TurretScript : MonoBehaviour
                 }
             }
         }
-        else
+        else if(currentLazer.activeSelf)
         {
             currentLazer.SetActive(false);
             once = true;

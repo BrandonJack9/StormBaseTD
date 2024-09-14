@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 3654794660529690574}
   - component: {fileID: 6505679368451706078}
   - component: {fileID: 3633445727458968967}
-  - component: {fileID: -7520637041214897679}
+  - component: {fileID: 3435256431174353454}
   m_Layer: 3
   m_Name: MediumMeteor
   m_TagString: mediummeteor
@@ -276,7 +276,8 @@ MonoBehaviour:
   speed: 5
   rotateSpeed: 200
   impactEffect: {fileID: 0}
-  maxHealth: 2
+  maxHealth: 3
+  currentHealth: 0
   healthBar: {fileID: 2019894609343344273}
   healthBarObject: {fileID: 8865624035409294741}
   crystal: {fileID: 0}
@@ -307,7 +308,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-7520637041214897679
+--- !u!114 &3435256431174353454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,14 +317,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7703387789587717935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 672cf9dfb87b11a4a92fcf2f677ab308, type: 3}
+  m_Script: {fileID: 11500000, guid: d3a22cecfa1e3d44ab11519e0c68b23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lootPrefabs:
-  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
   - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
-  spawnOffset: {x: 0, y: 15, z: 0}
-  dropChance: 10
+  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  script: {fileID: 6505679368451706078}
+  spawnOffset: {x: 0, y: 10, z: 0}
+  dropChance: 40
+  spawned: 0
 --- !u!1 &8445771877290539365
 GameObject:
   m_ObjectHideFlags: 0

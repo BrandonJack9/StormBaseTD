@@ -411,6 +411,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxHealth: 2
+  currentHealth: 0
   healthBar: {fileID: 1046120661671127411}
   healthBarObject: {fileID: 5682721225913814019}
   walkPoint: {x: 0, y: 0, z: 0}
@@ -442,7 +443,8 @@ MonoBehaviour:
   - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
   - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
   spawnOffset: {x: 0, y: 10, z: 0}
-  dropChance: 5
+  dropChance: 20
+  spawned: 0
 --- !u!1 &6594314470555373896
 GameObject:
   m_ObjectHideFlags: 0

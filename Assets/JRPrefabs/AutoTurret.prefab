@@ -125,9 +125,9 @@ MonoBehaviour:
   hoverHeight: 3
   hoverSpeed: 2
   rotationSpeed: 6
-  cooldownTime: 0.7
+  cooldownTime: 0.5
   rotationTimeMax: 2
-  lazerSpeed: 3000
+  lazerSpeed: 4000
   turretPosition: {x: 0, y: 0, z: 0}
   currentEnemyPosition: {x: 0, y: 0, z: 0}
   myEnemy: {fileID: 0}

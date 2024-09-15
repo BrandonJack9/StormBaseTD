@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6687546905815280869}
   - component: {fileID: 3993737782267589095}
   - component: {fileID: 2506308394619436692}
-  - component: {fileID: 4643141258563464924}
+  - component: {fileID: 6300869410853086093}
   m_Layer: 3
   m_Name: Meteor
   m_TagString: meteor
@@ -228,11 +228,14 @@ MonoBehaviour:
   speed: 5
   rotateSpeed: 200
   impactEffect: {fileID: 0}
-  maxHealth: 1
+  maxHealth: 2
+  currentHealth: 0
   healthBar: {fileID: 6905145257152998813}
   healthBarObject: {fileID: 4458128609256365163}
   crystal: {fileID: 0}
---- !u!114 &4643141258563464924
+  explosionPrefab: {fileID: 22610986036880023, guid: 2a58c7fd89903bf41a6052733726406d,
+    type: 3}
+--- !u!114 &6300869410853086093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,14 +244,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2256393791359009145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 672cf9dfb87b11a4a92fcf2f677ab308, type: 3}
+  m_Script: {fileID: 11500000, guid: d3a22cecfa1e3d44ab11519e0c68b23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lootPrefabs:
-  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
   - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
-  spawnOffset: {x: 0, y: 15, z: 0}
-  dropChance: 5
+  - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  script: {fileID: 2506308394619436692}
+  spawnOffset: {x: 0, y: 10, z: 0}
+  dropChance: 25
+  spawned: 0
 --- !u!1 &4458128609256365163
 GameObject:
   m_ObjectHideFlags: 0

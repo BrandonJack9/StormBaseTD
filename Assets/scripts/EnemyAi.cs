@@ -15,7 +15,7 @@ public class EnemyAi : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float maxHealth;
-    float currentHealth;
+    public float currentHealth;
     public Image healthBar;
     public GameObject healthBarObject;
 
@@ -43,7 +43,7 @@ public class EnemyAi : MonoBehaviour
         // Check if the meteor has hit the target (or any object you want)
         if ( other.CompareTag("lazer"))
         {
-            TakeDamage(1);
+            TakeDamage(.9f);
         }
     }
 

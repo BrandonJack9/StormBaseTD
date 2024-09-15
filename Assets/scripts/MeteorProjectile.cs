@@ -11,10 +11,11 @@ public class MeteorProjectile : MonoBehaviour
     public GameObject impactEffect;         // Effect to spawn on impact
     public static bool stopAllMeteors = false; // Static boolean to control if all meteors should stop
     public float maxHealth;
-    float currentHealth;
+    public float currentHealth;
     public Image healthBar;
     public GameObject healthBarObject;
     public GameObject crystal;
+    public GameObject explosionPrefab;
 
 
     private void Start()
@@ -27,7 +28,7 @@ public class MeteorProjectile : MonoBehaviour
         // Check if the meteor has hit the target (or any object you want)
         if (other.CompareTag("base"))// Ensure the target has the "Target" tag
         {
-            Destroy(gameObject);
+            DestroyComet();
         }
 
         if (other.CompareTag("lazer"))
@@ -72,9 +73,16 @@ public class MeteorProjectile : MonoBehaviour
         healthBar.fillAmount = currentHealth / maxHealth;
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            DestroyComet();
         }
     }
+    
+    public void DestroyComet()
+    {
+        if (explosionPrefab) Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
     // Set the target for this projectile
     public void SetTarget(Transform target)
     {

@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7177859205687650281}
   - component: {fileID: 6687546905815280869}
   - component: {fileID: 3993737782267589095}
-  - component: {fileID: 6342533552350286923}
+  - component: {fileID: 7546908193386494634}
   m_Layer: 3
   m_Name: LifeStealOrb
   m_TagString: lifesteal
@@ -137,7 +137,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2241473, y: 1.5, z: -22.33659}
-  m_LocalScale: {x: 2.2905, y: 2.2905, z: 2.2905}
+  m_LocalScale: {x: 3.302672, y: 3.302672, z: 3.302672}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5081374484172641808}
@@ -200,21 +200,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &6342533552350286923
+--- !u!114 &7546908193386494634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2256393791359009145}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd14bacf7957484db19a798037f9541, type: 3}
+  m_Script: {fileID: 11500000, guid: 08cf525d04fd02f408d9c1f117265372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  rotateSpeed: 200
-  impactEffect: {fileID: 0}
+  rotateSpeed: 1
 --- !u!1001 &8075781708804781209
 PrefabInstance:
   m_ObjectHideFlags: 0

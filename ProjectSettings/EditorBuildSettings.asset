@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 5d20caf9e3e06fc44931e87dc647f02f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/oldturret.unity
     guid: 1ea9df51b2582604599d524d1400bfbc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/nopowerups.unity
     guid: c16a9cf68fd211c49a84450ce936af9b
   - enabled: 1
@@ -22,10 +22,10 @@ EditorBuildSettings:
     guid: 4ac3a50b5fc40c541848a6e88e85c4e1
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
-    guid: 20a0ccf46acc542b882ed2070a0bbf5b
+    guid: 3e2d9e7dfd20d604486a7cefcb887def
   - enabled: 1
     path: Assets/Scenes/Stage3.unity
-    guid: fe2a7ad56af484dc2a1b5a8d5cb84609
+    guid: a635de58a379941449b5c83fe8556fbf
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: d3deb146f54af274ab92632f2fde550f

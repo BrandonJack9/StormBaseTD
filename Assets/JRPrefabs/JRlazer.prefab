@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6871139413478356190}
   - component: {fileID: 3105704476872538230}
   - component: {fileID: 6848074699599566419}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: continuousleechingparticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 4518806763705127598}
   - component: {fileID: 5646830634882878171}
   - component: {fileID: 6661455197224584375}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: leechingparticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9677,7 +9677,7 @@ GameObject:
   - component: {fileID: 816545659242216438}
   - component: {fileID: 1304681595325223564}
   - component: {fileID: 3908598220584433445}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9744,7 +9744,7 @@ GameObject:
   - component: {fileID: 661667364348461872}
   - component: {fileID: 409855125936622937}
   - component: {fileID: -3598999701522242718}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: JRlazer
   m_TagString: lazer
   m_Icon: {fileID: 0}

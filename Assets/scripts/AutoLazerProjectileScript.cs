@@ -25,6 +25,14 @@ public class AutoLazerProjectileScript : MonoBehaviour
             other.gameObject.GetComponent<EnemyAi>().TakeDamage(1);
             Destroy(gameObject);
         }
+        else if (other.CompareTag("enemyProjectile"))
+        {
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

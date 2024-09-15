@@ -421,12 +421,13 @@ MonoBehaviour:
     type: 3}
   sightRange: 200
   attackRange: 20
-  meleeRange: 15
+  meleeRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
   isSmall: 1
   isMedium: 0
   isLarge: 0
+  animator: {fileID: 0}
 --- !u!114 &7825519410933947838
 MonoBehaviour:
   m_ObjectHideFlags: 0

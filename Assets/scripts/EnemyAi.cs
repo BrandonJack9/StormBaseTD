@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -37,6 +38,8 @@ public class EnemyAi : MonoBehaviour
     public bool isSmall;
     public bool isMedium;
     public bool isLarge;
+
+    public Animator animator;
 
     void OnTriggerEnter(Collider other)
     {
@@ -83,7 +86,7 @@ public class EnemyAi : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-           DestroyEnemy();
+            StartCoroutine(deathSequence());
         }
 
         
@@ -122,6 +125,7 @@ public class EnemyAi : MonoBehaviour
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
+        animator.SetBool("attacking", true);
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
@@ -170,6 +174,13 @@ public class EnemyAi : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator deathSequence()
+    {
+        animator.SetBool("dead", true);
+        yield return new WaitForSecondsRealtime(100f);
+        DestroyEnemy();
     }
 
     private void OnDrawGizmosSelected()

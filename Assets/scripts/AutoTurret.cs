@@ -52,7 +52,7 @@ public class AutoTurret : MonoBehaviour
                 DetectFirstEnemyProjectile();
                 break;
             case TurretStatus.Aiming:
-                StartCoroutine(AimingSequence());
+                // StartCoroutine(AimingSequence());
                 break;
             case TurretStatus.Firing:
                 StartCoroutine(FiringSequence());
@@ -96,7 +96,8 @@ public class AutoTurret : MonoBehaviour
         }
         if (closest < 99999f)
         {
-            status = TurretStatus.Aiming;
+            status = TurretStatus.Firing;
+            // status = TurretStatus.Aiming;
             Debug.Log("Aiming towards enemy");
         }
     }
@@ -105,6 +106,8 @@ public class AutoTurret : MonoBehaviour
     // fires a laser at enemy projectile and triggers particle effects
     public void Fire()
     {
+        Quaternion targetRotation = Quaternion.LookRotation(currentEnemyPosition - gun.transform.position);
+        gun.transform.rotation = targetRotation;
         // instatiate the projectile firing towards the enemy
         // projectile will have the script
         if (myEnemy != null)

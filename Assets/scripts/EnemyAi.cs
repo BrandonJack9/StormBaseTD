@@ -178,6 +178,7 @@ public class EnemyAi : MonoBehaviour
 
     IEnumerator deathSequence()
     {
+        gameObject.GetComponent<Collider>().enabled = false;
         animator.SetBool("dead", true);
         yield return new WaitForSecondsRealtime(3f);
         DestroyEnemy();

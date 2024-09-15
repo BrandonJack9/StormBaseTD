@@ -46,6 +46,8 @@ public class MeteorProjectile : MonoBehaviour
     }
     void Update()
     {
+      
+        
         if (stopAllMeteors)
         {
             Destroy(gameObject);

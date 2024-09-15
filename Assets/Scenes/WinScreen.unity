@@ -4192,7 +4192,6 @@ GameObject:
   - component: {fileID: 1134646784}
   - component: {fileID: 1134646787}
   - component: {fileID: 1134646786}
-  - component: {fileID: 1134646785}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -4219,21 +4218,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -3}
   m_SizeDelta: {x: 598.5, y: 50}
   m_Pivot: {x: 0.25, y: 0.25}
---- !u!114 &1134646785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134646783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f25ec7d21f93e4cba6ac14c2ddaa4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxRotationAngle: 10
-  snapSpeed: 5
-  holdTime: 0.1
 --- !u!114 &1134646786
 MonoBehaviour:
   m_ObjectHideFlags: 0

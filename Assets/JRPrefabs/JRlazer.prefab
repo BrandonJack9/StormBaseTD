@@ -9883,4 +9883,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bf637aa39ee4f8f827bf27efbdc6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileLifeTime: 20
+  projectileLifeTime: 4

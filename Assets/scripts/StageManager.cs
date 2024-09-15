@@ -15,7 +15,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] GameObject timerthing;
     public GameObject pausButt;
     public GameObject bar;
-
+    public int stageAmount;
     public GameObject crossHair;
 
     private bool stageCompleted = false;
@@ -64,7 +64,7 @@ public class StageManager : MonoBehaviour
     void OnNextStageButtonClicked()
     {
         // Load the next stage if it's within range
-        if (stageNumber < 3)
+        if (stageNumber < stageAmount)
         {
             stageNumber++;
             SceneManager.LoadScene("Stage" + stageNumber.ToString());

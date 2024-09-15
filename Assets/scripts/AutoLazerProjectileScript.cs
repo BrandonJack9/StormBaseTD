@@ -10,7 +10,7 @@ public class AutoLazerProjectileScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("AutoLazer generated");   
+        StartCoroutine(DeleteLazer(projectileLifeTime));
     }
 
     private void OnTriggerEnter(Collider other)

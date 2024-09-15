@@ -9,7 +9,11 @@ public class AudioManager : MonoBehaviour
    GameObject lazerSFXHolder;
 
    GameObject gameOSTHolder;
+
+   GameObject explosionSFXHolder;
    AudioSource[] lazerSFX;
+
+   AudioSource explosionSFX;
    
    AudioSource[] ost;
 
@@ -28,7 +32,9 @@ public class AudioManager : MonoBehaviour
         powerUpSFX = GetComponent<AudioSource>();
         lazerSFXHolder = gameObject.transform.GetChild(0).gameObject;
         lazerSFX = lazerSFXHolder.GetComponents<AudioSource>();
-        
+        explosionSFXHolder = gameObject.transform.GetChild(2).gameObject;
+        explosionSFX = explosionSFXHolder.GetComponent<AudioSource>();
+
         
     }
 
@@ -50,6 +56,11 @@ public class AudioManager : MonoBehaviour
                 source.Play();
             }
         }
+    }
+
+    public void PlayExplosionSFX(Vector3 Location){
+        explosionSFXHolder.transform.position = Location;
+        explosionSFX.Play();
     }
 
     private void HandleOST(){

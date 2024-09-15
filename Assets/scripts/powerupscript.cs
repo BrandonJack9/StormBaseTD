@@ -9,7 +9,8 @@ public class powerupscript : MonoBehaviour
     {
         if (other.CompareTag("lazer"))
         {
-            Destroy(gameObject);
+            AudioSource powerupSFX = GetComponent<AudioSource>();
+            powerupSFX.Play();
         }
     }
     void Start()

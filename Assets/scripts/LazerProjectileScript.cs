@@ -8,6 +8,8 @@ public class LazerProjectileScript : MonoBehaviour
     public float projectileLifeTime;
     public GameObject crystal;
     public GameObject pyramid;
+
+
     public GameObject lifeStealParticles;
     public GameObject lifeStealParticlesContinuous;
     bool stealLife = false;
@@ -18,6 +20,7 @@ public class LazerProjectileScript : MonoBehaviour
     {
         crystal = GameObject.Find("turret");
         pyramid = GameObject.Find("basePyramid");
+        
 
         if(crystal.GetComponent<TurretScript>().lifeStealObtained == true)
         {
@@ -34,6 +37,7 @@ public class LazerProjectileScript : MonoBehaviour
             crystal.GetComponent<TurretScript>().lifeStealObtained = true;
             if (crystal.GetComponent<TurretScript>().lifeStealStack < 10)
             {
+                AudioManager.instance.PlayPowerUpSFX();
                 crystal.GetComponent<TurretScript>().lifeStealStack++;
             }
         }
@@ -43,6 +47,7 @@ public class LazerProjectileScript : MonoBehaviour
             crystal.GetComponent<TurretScript>().continuousBeamObtained = true;
             if (crystal.GetComponent<TurretScript>().lifeStealStack < 5)
             {
+                AudioManager.instance.PlayPowerUpSFX();
                 crystal.GetComponent<TurretScript>().beamStack++;
             }
         }

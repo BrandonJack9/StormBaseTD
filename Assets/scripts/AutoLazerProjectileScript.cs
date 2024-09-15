@@ -15,9 +15,22 @@ public class AutoLazerProjectileScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     { 
-        if (other.CompareTag("meteor") || other.CompareTag("enemy"))
+        if (other.CompareTag("meteor"))
+        {
+            other.gameObject.GetComponent<MeteorProjectile>().TakeDamage(1);
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("enemy"))
+        {
+            other.gameObject.GetComponent<EnemyAi>().TakeDamage(1);
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("enemyProjectile"))
         {
             Destroy(other.gameObject);
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }

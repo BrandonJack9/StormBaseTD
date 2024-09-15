@@ -105,7 +105,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -122,12 +122,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRadarRadius: 100
-  hoverHeight: 3
+  hoverHeight: 10
   hoverSpeed: 2
-  rotationSpeed: 6
-  cooldownTime: 0.7
-  rotationTimeMax: 2
-  lazerSpeed: 3000
+  rotationSpeed: 10
+  cooldownTime: 1
+  rotationTimeMax: 10
+  lazerSpeed: 4000
   turretPosition: {x: 0, y: 0, z: 0}
   currentEnemyPosition: {x: 0, y: 0, z: 0}
   myEnemy: {fileID: 0}

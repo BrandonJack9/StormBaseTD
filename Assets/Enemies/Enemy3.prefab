@@ -31,12 +31,12 @@ PrefabInstance:
     - target: {fileID: 1493101672743952344, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: meleeRange
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1493101672743952344, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: attackRange
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}

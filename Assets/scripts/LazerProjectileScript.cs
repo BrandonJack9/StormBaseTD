@@ -32,6 +32,7 @@ public class LazerProjectileScript : MonoBehaviour
         {
             Debug.Log("got lifesteal");
             crystal.GetComponent<TurretScript>().lifeStealObtained = true;
+            AudioManager.instance.PlayPowerUpSFX();
             if (crystal.GetComponent<TurretScript>().lifeStealStack < 10)
             {
                 crystal.GetComponent<TurretScript>().lifeStealStack++;
@@ -41,6 +42,7 @@ public class LazerProjectileScript : MonoBehaviour
         if (other.CompareTag("continuouspowerup")){
             Debug.Log("got continuous beam");
             crystal.GetComponent<TurretScript>().continuousBeamObtained = true;
+            AudioManager.instance.PlayPowerUpSFX();
             if (crystal.GetComponent<TurretScript>().lifeStealStack < 5)
             {
                 crystal.GetComponent<TurretScript>().beamStack++;

@@ -30,13 +30,21 @@ public class MainMenu : MonoBehaviour
 
 
         // Only lock the cursor if not in the Main Menu scene
-        if (!IsInMainMenu())
+        // if (!IsInMainMenu())
+        // {
+        //     LockCursor();  // Lock the cursor initially when the scene starts (if not MainMenu)
+        // }
+        // else
+        // {
+        //     UnlockCursor();  // Unlock the cursor in the Main Menu scene
+        // }
+        if (IsInMainMenu() || IsInWinScreen())
         {
-            LockCursor();  // Lock the cursor initially when the scene starts (if not MainMenu)
+            UnlockCursor();  // Unlock the cursor in the Main Menu or WinScreen scene
         }
         else
         {
-            UnlockCursor();  // Unlock the cursor in the Main Menu scene
+            LockCursor();  // Lock the cursor initially when the scene starts (if not MainMenu or WinScreen)
         }
     }
 
@@ -197,6 +205,12 @@ public class MainMenu : MonoBehaviour
     {
         // Replace "MainMenu" with the exact name of your Main Menu scene
         return SceneManager.GetActiveScene().name == "MainMenu";
+    }
+
+    private bool IsInWinScreen()
+    {
+        // Replace "MainMenu" with the exact name of your Main Menu scene
+        return SceneManager.GetActiveScene().name == "WinScreen";
     }
 }
 

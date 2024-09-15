@@ -376,8 +376,8 @@ MonoBehaviour:
   projectile: {fileID: 4818255210446590272, guid: 881681197afc90b45bab4c57f6d8a0b0,
     type: 3}
   sightRange: 200
-  attackRange: 10
-  meleeRange: 5
+  attackRange: 20
+  meleeRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
   isSmall: 0

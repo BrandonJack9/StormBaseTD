@@ -80,7 +80,6 @@ public class MeteorProjectile : MonoBehaviour
     public void DestroyComet()
     {
         if (explosionPrefab) Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        AudioManager.instance.PlayExplosionSFX(transform.position);
         Destroy(gameObject);
     }
 

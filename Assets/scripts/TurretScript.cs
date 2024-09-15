@@ -43,7 +43,6 @@ public class TurretScript : MonoBehaviour
                 currentLazer.transform.position = barrelPoint.transform.position;
                 currentLazer.transform.up = barrelPoint.transform.forward;
                 currentLazer.GetComponent<Rigidbody>().AddForce(currentLazer.transform.up * lazerSpeed, 0);
-                AudioManager.instance.PlayLazerSFX();
                 StartCoroutine(fireCoolDown(fireRate));
             }
             

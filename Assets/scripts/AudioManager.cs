@@ -66,17 +66,32 @@ public class AudioManager : MonoBehaviour
     private void HandleOST(){
         if (SceneManager.GetActiveScene().name == "MainMenu"){
             ost[2].Play();
+            ost[1].Stop();
             ost[0].Stop();
-            ost[1].Stop();
-        }
-        if (SceneManager.GetActiveScene().name != "Stage3" && SceneManager.GetActiveScene().name != "MainMenu"){
-            ost[0].Play();
-            ost[1].Stop();
+        }else if (SceneManager.GetActiveScene().name == "Stage3"){
+            ost[1].Play();
+            ost[0].Stop();
             ost[2].Stop();
-        } else if (SceneManager.GetActiveScene().name == "Stage3"){
+        } else if (SceneManager.GetActiveScene().name == "Stage4"){
             ost[1].Play();
             ost[2].Stop();
             ost[0].Stop();
+        } else if (SceneManager.GetActiveScene().name == "Stage5"){
+            ost[1].Play();
+            ost[2].Stop();
+            ost[0].Stop();
+        } else if (SceneManager.GetActiveScene().name == "WinScreen"){
+            ost[2].Play();
+            ost[0].Stop();
+            ost[1].Stop();
+        } else {
+            ost[0].Play();
+            ost[1].Stop();
+            ost[2].Stop();
         }
+           
+       
+        
+        
     }
 }

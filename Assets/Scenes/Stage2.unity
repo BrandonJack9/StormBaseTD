@@ -1563,8 +1563,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.038353246, y: 0.954105, z: 0.2621639, w: -0.13958071}
-  m_LocalPosition: {x: 3.1476476, y: -0.22080314, z: 21.000343}
+  m_LocalRotation: {x: 0.019691523, y: 0.9615942, z: 0.2642217, w: -0.07166427}
+  m_LocalPosition: {x: 0.14921808, y: -0.22080314, z: 21.234404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2463,8 +2463,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495421474}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03632496, y: 0.00000004225583, z: 0.000000018750228, w: 0.9993401}
-  m_LocalPosition: {x: 2.9999998, y: 2.0000005, z: -0.00000071525574}
+  m_LocalRotation: {x: 0.0363249, y: 0.000000036614875, z: 0.00000001834387, w: 0.99934006}
+  m_LocalPosition: {x: 3, y: 2.0000005, z: -0.00000059604645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4729,9 +4729,9 @@ MonoBehaviour:
   stageCompleteText: {fileID: 1088055620}
   nextStageButton: {fileID: 487041188}
   timerthing: {fileID: 1622933320}
-  pausButt: {fileID: 0}
-  bar: {fileID: 0}
-  crossHair: {fileID: 0}
+  pausButt: {fileID: 635239089}
+  bar: {fileID: 636470340}
+  crossHair: {fileID: 1553240541}
 --- !u!4 &985782514
 Transform:
   m_ObjectHideFlags: 0
@@ -9373,8 +9373,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055227866}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.018141462, y: 0.00000003188395, z: 0.000000025175376, w: 0.99983543}
-  m_LocalPosition: {x: -0.0000009137084, y: 0.00000024206338, z: -0.00000017392}
+  m_LocalRotation: {x: 0.018141432, y: 0.000000014630188, z: 0.0000000072908906, w: 0.9998355}
+  m_LocalPosition: {x: -0.0000009431392, y: 0.00000017470437, z: -0.000000060602886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9452,9 +9452,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073758590}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000041608292, y: 0.000000032711643, z: 0.00000001533122,
+  m_LocalRotation: {x: -0.000000028777995, y: 0.000000006766985, z: 0.0000000034150607,
     w: 1}
-  m_LocalPosition: {x: -0.0000009137084, y: 0.00000024206338, z: -0.00000017392}
+  m_LocalPosition: {x: -0.0000009431392, y: 0.00000017470437, z: -0.000000060602886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -7,27 +7,32 @@ public class AutoTurret : MonoBehaviour
     private bool isAiming;
     private bool isFiring;
     private bool isWaiting;
-    public ParticleSystem.EmissionModule emissions;
+    private bool isHovering;
+    private Vector3 hoverTarget;
     public int turretRadarRadius;
+    public int hoverHeight;
+    public float hoverSpeed;
     public float rotationSpeed;
     public float cooldownTime;
     public float rotationTimeMax;
+    public float lazerSpeed;
     public Vector3 turretPosition;
     public Vector3 currentEnemyPosition;
     public GameObject myEnemy;
     public GameObject theProjectilePrefab;
+    public GameObject gun;
     public TurretStatus status;
 
     // Start is called before the first frame update
     void Start()
     {
+        gun = gameObject.transform.Find("gun").gameObject;
         isAiming = false;
         isFiring = false;
         isWaiting = false;
-        turretPosition = gameObject.transform.position;
-        ParticleSystem ps = gameObject.GetComponent<ParticleSystem>();
-        emissions = ps.emission;
-        emissions.enabled = false;   
+        isHovering = false;
+        turretPosition = gun.transform.position;
+        hoverTarget = new (turretPosition.x, turretPosition.y + hoverHeight, turretPosition.z);
     }
 
     // Update is called once per frame
@@ -40,6 +45,9 @@ public class AutoTurret : MonoBehaviour
         // Waiting: Do nothing
         switch (status)
         {
+            case TurretStatus.Hovering:
+                StartCoroutine(HoverSequence());
+                break;
             case TurretStatus.Detecting:
                 DetectFirstEnemyProjectile();
                 break;
@@ -58,7 +66,8 @@ public class AutoTurret : MonoBehaviour
     // get all gameObject projectiles within its radius
     // find closest one
     public void DetectFirstEnemyProjectile()
-    { 
+    {
+        Debug.Log("Turret operational");
         Collider[] allObjects = Physics.OverlapSphere(turretPosition, turretRadarRadius);
         float closest = 99999f;
         GameObject theClosestMeteor;
@@ -66,7 +75,7 @@ public class AutoTurret : MonoBehaviour
         foreach (Collider i in allObjects)
         {
             // only get closest enemy projectile
-            if (i.gameObject.CompareTag("meteor"))
+            if (i.gameObject.CompareTag("meteor") || i.gameObject.CompareTag("enemy"))
             {
                 if (i.gameObject != null)
                 {
@@ -100,15 +109,43 @@ public class AutoTurret : MonoBehaviour
         // projectile will have the script
         if (myEnemy != null)
         {
-            emissions.enabled = true;
-            GameObject laser = (GameObject)Instantiate(theProjectilePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject laser = Instantiate(theProjectilePrefab);
+            laser.transform.position = gun.transform.position;
+            laser.transform.up = gun.transform.forward;
             Debug.Log(currentEnemyPosition + " is the current enemy position");
-            laser.GetComponent<AutoTurretProjectile>().Fire(gameObject.transform.position, myEnemy.transform.position);
-            
+            laser.GetComponent<Rigidbody>().AddForce(laser.transform.up * lazerSpeed, 0);
         } 
         // projectile = prefab with the aiming data
         // funnel in data regarding the enemy position
         // wait 1 second before firing again
+    }
+
+    public bool HoverToTop()
+    {
+        return hoverTarget != (transform.position = Vector3.MoveTowards(transform.position, hoverTarget, hoverSpeed * Time.deltaTime));
+    }
+
+    public IEnumerator HoverSequence()
+    {
+        if (isHovering)
+        {
+            yield break;
+        }
+
+        if (status != TurretStatus.Hovering)
+        {
+            yield break;
+        }
+
+        isHovering = true;
+
+        while (HoverToTop())
+        {
+            yield return null;
+        }
+
+        isHovering = false;
+        status = TurretStatus.Detecting;
     }
 
     // turn turret towards projectile
@@ -126,14 +163,16 @@ public class AutoTurret : MonoBehaviour
 
         isAiming = true;
 
-        Quaternion targetRotation = Quaternion.LookRotation(currentEnemyPosition - turretPosition);
+        Debug.Log("my enemy is in: " + currentEnemyPosition);
+        Quaternion targetRotation = Quaternion.LookRotation(currentEnemyPosition - gun.transform.position);
         float rotationTime = 0.0f;
         while (rotationTime < rotationTimeMax)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationTime);
+            gun.transform.rotation = Quaternion.Slerp(gun.transform.rotation, targetRotation, rotationTime);
             rotationTime += Time.deltaTime * rotationSpeed;
             yield return null;
         }
+        Debug.Log("Preparing to fire...");
         status = TurretStatus.Firing;
         isAiming = false;
     }
@@ -183,6 +222,7 @@ public class AutoTurret : MonoBehaviour
 
 public enum TurretStatus
 {
+    Hovering,
     Detecting,
     Aiming,
     Firing,

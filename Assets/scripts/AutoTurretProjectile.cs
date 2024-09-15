@@ -5,7 +5,7 @@ using UnityEngine;
 public class AutoTurretProjectile : MonoBehaviour
 {
     // renders line that acts as a laser
-    public LineRenderer lineRenderer;
+    // public LineRenderer lineRenderer;
     public float laserDuration = 1.0f;
 
     // Fires the laser at a projectile
@@ -16,8 +16,8 @@ public class AutoTurretProjectile : MonoBehaviour
         Vector3 dirToTarget = spaceToTarget / dist;
 
         Ray theRay = new Ray(turret, dirToTarget);
-        lineRenderer = gameObject.GetComponent<LineRenderer>();
-        lineRenderer.SetPosition(0, turret);
+        // lineRenderer = gameObject.GetComponent<LineRenderer>();
+        // lineRenderer.SetPosition(0, turret);
         Debug.Log("FIRE!!!");
         // if the ray hits an enemy projectile
         if (Physics.Raycast(theRay, out RaycastHit hit))
@@ -26,8 +26,8 @@ public class AutoTurretProjectile : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("meteor"))
                 {
-                    lineRenderer.SetPosition(1, hit.collider.gameObject.transform.position);
-                    Debug.Log("The line renderers endpoint is: " + hit.collider.gameObject.transform.position);
+                    // lineRenderer.SetPosition(1, hit.collider.gameObject.transform.position);
+                    // Debug.Log("The line renderers endpoint is: " + hit.collider.gameObject.transform.position);
                     Destroy(hit.collider.gameObject);
                 }
                 
@@ -39,12 +39,9 @@ public class AutoTurretProjectile : MonoBehaviour
     // process of visually rendering the laser with particle effects
     public IEnumerator LaserSequence()
     {
-        lineRenderer.enabled = true;
+        // lineRenderer.enabled = true;
         yield return new WaitForSeconds(laserDuration);
-        lineRenderer.enabled = false;
-        AutoTurret atur = GameObject.Find("AutoTurret").GetComponent<AutoTurret>();
-        // end particle effects when done
-        atur.emissions.enabled = false;
+        // lineRenderer.enabled = false;
         Destroy(gameObject);
     }
 }

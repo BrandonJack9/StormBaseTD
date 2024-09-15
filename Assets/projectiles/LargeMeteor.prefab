@@ -506,6 +506,7 @@ MonoBehaviour:
   lootPrefabs:
   - {fileID: 6199261374731042423, guid: 6c0fc629b53b6d44089984c91cb1b90f, type: 3}
   - {fileID: 2256393791359009145, guid: 0775f3ccc52c56a47904ee945b3580b7, type: 3}
+  - {fileID: 7657872970849688695, guid: 35a2d75e5ee244a76ad0b7b616df9fc4, type: 3}
   script: {fileID: 3993502123521311270}
   spawnOffset: {x: 0, y: 15, z: 0}
   dropChance: 60

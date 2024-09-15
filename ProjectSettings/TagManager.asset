@@ -17,6 +17,8 @@ TagManager:
   - continuouspowerup
   - mediummeteor
   - largemeteor
+  - turretpowerup
+  - turretgun
   layers:
   - Default
   - TransparentFX

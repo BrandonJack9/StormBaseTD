@@ -71,6 +71,8 @@ public class StageManager : MonoBehaviour
         }
         else
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Debug.Log("All stages completed! Exiting game...");
             SceneManager.LoadScene("WinScreen");
             // You can add code to quit the game or show a final screen

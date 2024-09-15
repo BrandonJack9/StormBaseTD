@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretRadarRadius: 100
   hoverHeight: 10
-  hoverSpeed: 2
+  hoverSpeed: 4
   rotationSpeed: 10
   cooldownTime: 1
   rotationTimeMax: 10

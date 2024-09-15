@@ -144,6 +144,7 @@ public class EnemyAi : MonoBehaviour
             else if (isMedium)
             {
                 Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                rb.transform.forward = transform.forward;
                 rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
                 //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             }
@@ -169,7 +170,6 @@ public class EnemyAi : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
-        if (currentHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
     private void DestroyEnemy()
     {
@@ -179,7 +179,7 @@ public class EnemyAi : MonoBehaviour
     IEnumerator deathSequence()
     {
         animator.SetBool("dead", true);
-        yield return new WaitForSecondsRealtime(100f);
+        yield return new WaitForSecondsRealtime(3f);
         DestroyEnemy();
     }
 

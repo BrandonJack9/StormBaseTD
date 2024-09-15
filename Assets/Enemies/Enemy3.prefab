@@ -33,6 +33,11 @@ PrefabInstance:
       propertyPath: meleeRange
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1493101672743952344, guid: 0040aa183686c5b4b8556f3af543f819,
+        type: 3}
+      propertyPath: attackRange
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -51,17 +56,17 @@ PrefabInstance:
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.76593
+      value: -16.455338
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3829145
+      value: -5.37
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.203634
+      value: 79.701775
       objectReference: {fileID: 0}
     - target: {fileID: 4253509203873331312, guid: 0040aa183686c5b4b8556f3af543f819,
         type: 3}

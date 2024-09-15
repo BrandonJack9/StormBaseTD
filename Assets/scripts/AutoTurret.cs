@@ -7,6 +7,7 @@ public class AutoTurret : MonoBehaviour
     private bool isAiming;
     private bool isFiring;
     private bool isWaiting;
+    private bool isHovering;
     private Vector3 hoverTarget;
     public int turretRadarRadius;
     public int hoverHeight;
@@ -25,12 +26,13 @@ public class AutoTurret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gun = gameObject.transform.Find("gun").gameObject;
         isAiming = false;
         isFiring = false;
         isWaiting = false;
+        isHovering = false;
         turretPosition = gun.transform.position;
         hoverTarget = new (turretPosition.x, turretPosition.y + hoverHeight, turretPosition.z);
-        StartCoroutine(HoverSequence());
     }
 
     // Update is called once per frame
@@ -43,6 +45,9 @@ public class AutoTurret : MonoBehaviour
         // Waiting: Do nothing
         switch (status)
         {
+            case TurretStatus.Hovering:
+                StartCoroutine(HoverSequence());
+                break;
             case TurretStatus.Detecting:
                 DetectFirstEnemyProjectile();
                 break;
@@ -119,12 +124,28 @@ public class AutoTurret : MonoBehaviour
     {
         return hoverTarget != (transform.position = Vector3.MoveTowards(transform.position, hoverTarget, hoverSpeed * Time.deltaTime));
     }
+
     public IEnumerator HoverSequence()
     {
+        if (isHovering)
+        {
+            yield break;
+        }
+
+        if (status != TurretStatus.Hovering)
+        {
+            yield break;
+        }
+
+        isHovering = true;
+
         while (HoverToTop())
         {
             yield return null;
         }
+
+        isHovering = false;
+        status = TurretStatus.Detecting;
     }
 
     // turn turret towards projectile
@@ -142,8 +163,8 @@ public class AutoTurret : MonoBehaviour
 
         isAiming = true;
 
-        
-        Quaternion targetRotation = Quaternion.LookRotation(currentEnemyPosition - turretPosition);
+        Debug.Log("my enemy is in: " + currentEnemyPosition);
+        Quaternion targetRotation = Quaternion.LookRotation(currentEnemyPosition - gun.transform.position);
         float rotationTime = 0.0f;
         while (rotationTime < rotationTimeMax)
         {
@@ -151,6 +172,7 @@ public class AutoTurret : MonoBehaviour
             rotationTime += Time.deltaTime * rotationSpeed;
             yield return null;
         }
+        Debug.Log("Preparing to fire...");
         status = TurretStatus.Firing;
         isAiming = false;
     }
@@ -200,6 +222,7 @@ public class AutoTurret : MonoBehaviour
 
 public enum TurretStatus
 {
+    Hovering,
     Detecting,
     Aiming,
     Firing,

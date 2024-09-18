@@ -135,7 +135,7 @@ MonoBehaviour:
     type: 3}
   gun: {fileID: 0}
   status: 0
-  MaxTurrets: 0
+  maxTurretsAmount: 3
 --- !u!1 &8929621082180592032
 GameObject:
   m_ObjectHideFlags: 0

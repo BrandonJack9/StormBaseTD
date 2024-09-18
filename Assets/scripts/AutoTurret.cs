@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AutoTurret : MonoBehaviour
 {
@@ -23,13 +25,18 @@ public class AutoTurret : MonoBehaviour
     public GameObject gun;
     public TurretStatus status;
 
-    public static int TotalTurretAmount;
 
-    public int MaxTurrets;
+
+    public int maxTurretsAmount;
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        if (AutoTurretManager.instance.GetCurrentTurretsAmount() > AutoTurretManager.instance.GetMaxTurretAmount()){
+            Destroy(gameObject);
+        } 
+        AutoTurretManager.instance.IncrementCurrentTurretAmount();
         gun = gameObject.transform.Find("gun").gameObject;
         isAiming = false;
         isFiring = false;
@@ -65,6 +72,7 @@ public class AutoTurret : MonoBehaviour
                 break;
         }
     }
+
 
     // get all gameObject projectiles within its radius
     // find closest one

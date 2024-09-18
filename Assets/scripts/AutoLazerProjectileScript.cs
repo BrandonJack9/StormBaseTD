@@ -5,6 +5,10 @@ using UnityEngine;
 public class AutoLazerProjectileScript : MonoBehaviour
 {
     public float projectileLifeTime;
+
+    public float enemyDamage;
+
+    public float meteorDamage;
  
     // Start is called before the first frame update
 
@@ -17,12 +21,14 @@ public class AutoLazerProjectileScript : MonoBehaviour
     { 
         if (other.CompareTag("meteor"))
         {
-            other.gameObject.GetComponent<MeteorProjectile>().TakeDamage(1);
+            Debug.Log("meteor damage"); 
+            other.gameObject.GetComponent<MeteorProjectile>().TakeDamage(meteorDamage);
             Destroy(gameObject);
         }
         else if (other.CompareTag("enemy"))
         {
-            other.gameObject.GetComponent<EnemyAi>().TakeDamage(1);
+             Debug.Log("enemy damage");
+            other.gameObject.GetComponent<EnemyAi>().TakeDamage(enemyDamage);
             Destroy(gameObject);
         }
         else if (other.CompareTag("enemyProjectile"))

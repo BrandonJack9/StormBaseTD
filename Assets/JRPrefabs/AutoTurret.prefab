@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRadarRadius: 100
-  hoverHeight: 10
+  hoverHeight: 7
   hoverSpeed: 2
   rotationSpeed: 10
   cooldownTime: 1
@@ -135,6 +135,7 @@ MonoBehaviour:
     type: 3}
   gun: {fileID: 0}
   status: 0
+  MaxTurrets: 0
 --- !u!1 &8929621082180592032
 GameObject:
   m_ObjectHideFlags: 0

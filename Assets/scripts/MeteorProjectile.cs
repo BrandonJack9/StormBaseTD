@@ -71,6 +71,7 @@ public class MeteorProjectile : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log(damage);
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
         if (currentHealth <= 0)

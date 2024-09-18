@@ -19,6 +19,7 @@ TagManager:
   - largemeteor
   - turretpowerup
   - turretgun
+  - jrlazer
   layers:
   - Default
   - TransparentFX

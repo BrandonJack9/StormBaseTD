@@ -23,6 +23,10 @@ public class AutoTurret : MonoBehaviour
     public GameObject gun;
     public TurretStatus status;
 
+    public static int TotalTurretAmount;
+
+    public int MaxTurrets;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +42,10 @@ public class AutoTurret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // KEY:
-        // Detecting: find the closest enemy projectile
-        // Aiming: rotate the turret towards the target
-        // Firing: shoot laser and destroy the target
-        // Waiting: Do nothing
+        AutoTurretCases(status);
+    }
+
+    private void AutoTurretCases(TurretStatus status){
         switch (status)
         {
             case TurretStatus.Hovering:

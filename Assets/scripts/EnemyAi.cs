@@ -168,6 +168,7 @@ public class EnemyAi : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log(damage);
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth / maxHealth;
     }
